@@ -33,7 +33,9 @@ scheduler.py triggers scraping automatically every morning at 8:00 AM.
 app.py serves a Flask app to view the 10 most recent articles with pagination.
 
 Duplicate entries are avoided using SQL constraints.
+
 📈 Future Improvements
+
 🔍 Add search and category-based filters
 
 ✉️ Send daily newsletters to subscribers
