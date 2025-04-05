@@ -1,5 +1,7 @@
 📰 VitalNews-Scraping-the-Latest-in-Health-Every-Day
+
 📌 Overview
+
 A fully automated web application that scrapes the latest health-related news articles from Medical News Today, stores them in a SQLite database, and displays them using a Flask-powered frontend. The scraper runs daily at 8:00 AM to ensure content is always fresh and relevant. (
 
 ⚙️ Features
