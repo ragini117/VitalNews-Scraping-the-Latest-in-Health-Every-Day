@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: vitalnews-web
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+
+  - type: worker
+    name: vitalnews-scraper
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python scheduler.py
