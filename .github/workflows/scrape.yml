@@ -26,10 +26,13 @@ jobs:
       - name: 📰 Run scraper script
         run: python scraper.py
 
-      - name: 🔄 Commit and push changes
+      - name: ✅ Commit and push changes
+        env:
+          TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "gh-bot"
+          git config --global user.email "gh-bot@example.com"
+          git remote set-url origin https://x-access-token:${TOKEN}@github.com/ragini117/VitalNews-Scraping-the-Latest-in-Health-Every-Day.git
           git add health_news.db
-          git commit -m "🤖 Auto update news database" || echo "No changes to commit"
-          git push
+          git commit -m "📰 Auto update news database" || echo "No changes to commit"
+          git push origin main
