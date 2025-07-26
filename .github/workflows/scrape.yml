@@ -28,12 +28,11 @@ jobs:
 
       - name: ✅ Commit and push changes
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}
+         GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git config --global user.name "gh-bot"
-          git config --global user.email "gh-bot@example.com"
-          git add health_news.db
-          git commit -m "📰 Auto update news database" || echo "No changes to commit"
-          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/ragini117/VitalNews-Scraping-the-Latest-in-Health-Every-Day.git
-          git push https://${GH_PAT}@github.com/ragini117/VitalNews-Scraping-the-Latest-in-Health-Every-Day.git main
+         git config --global user.name "gh-bot"
+         git config --global user.email "gh-bot@example.com"
+         git add health_news.db
+         git commit -m "📰 Auto update news database" || echo "No changes to commit"
+         git push https://${GH_PAT}@github.com/ragini117/VitalNews-Scraping-the-Latest-in-Health-Every-Day.git HEAD:main
 
