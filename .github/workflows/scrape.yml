@@ -35,4 +35,5 @@ jobs:
           git add health_news.db
           git commit -m "📰 Auto update news database" || echo "No changes to commit"
           git remote set-url origin https://x-access-token:${GH_PAT}@github.com/ragini117/VitalNews-Scraping-the-Latest-in-Health-Every-Day.git
-          git push origin main
+          git push https://${GH_PAT}@github.com/ragini117/VitalNews-Scraping-the-Latest-in-Health-Every-Day.git main
+
