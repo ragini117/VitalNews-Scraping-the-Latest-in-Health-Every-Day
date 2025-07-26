@@ -34,5 +34,5 @@ jobs:
          git config --global user.email "gh-bot@example.com"
          git add health_news.db
          git commit -m "📰 Auto update news database" || echo "No changes to commit"
-          git push origin main
+         git push https://${GH_PAT}@github.com/ragini117/VitalNews-Scraping-the-Latest-in-Health-Every-Day.git HEAD:main
 
